@@ -43,7 +43,7 @@
 #define Y_MIN_PIN          26
 #define Y_MAX_PIN          28
 #define Z_MIN_PIN          30
-#define Z_MAX_PIN          32
+#define Z_MAX_PIN          -1//32
 
 //
 // Steppers
@@ -72,8 +72,8 @@
 // Temperature Sensors
 //
 #define TEMP_0_PIN          8
-#define TEMP_1_PIN          9
-#define TEMP_BED_PIN       10
+#define TEMP_1_PIN          10//9
+#define TEMP_BED_PIN        9//10
 
 //
 // Heaters / Fans
