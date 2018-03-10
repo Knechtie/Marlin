@@ -529,7 +529,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 79.21, 2560, 100.13 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 79.21, 400, 100.13 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -715,7 +715,7 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   5 //10 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
 
 // For M851 give a range for adjusting the Z probe offset
@@ -786,7 +786,7 @@
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS MANUAL_X_HOME_POS
 #define Y_MIN_POS 0
-#define Z_MIN_POS 0
+#define Z_MIN_POS -8
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 170
@@ -1385,7 +1385,7 @@
 //  If CLOCKWISE normally moves DOWN this makes it go UP.
 //  If CLOCKWISE normally moves UP this makes it go DOWN.
 //
-#define REVERSE_MENU_DIRECTION
+//#define REVERSE_MENU_DIRECTION
 
 //
 // Individual Axis Homing
