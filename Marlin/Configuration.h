@@ -357,9 +357,10 @@
   // Ultimaker
   
   //Kp: 33.56 Ki: 4.40 Kd: 63.92 @200°C; 13.03.18
-  #define  DEFAULT_Kp 33.56
-  #define  DEFAULT_Ki 4.40
-  #define  DEFAULT_Kd 63.92
+  //P22.12 I2.93 D41.68; 19.03.18 @210
+  #define  DEFAULT_Kp 22.12
+  #define  DEFAULT_Ki 2.93
+  #define  DEFAULT_Kd 41.68
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
@@ -546,7 +547,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 500, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 2000, 100, 10000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -556,9 +557,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   2000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk (mm/s)
@@ -569,7 +570,7 @@
  * value set here, it may happen instantaneously.
  */
 #define DEFAULT_XJERK                 10.0
-#define DEFAULT_YJERK                 0
+#define DEFAULT_YJERK                 10.0
 #define DEFAULT_ZJERK                  0.3
 #define DEFAULT_EJERK                  5.0
 
